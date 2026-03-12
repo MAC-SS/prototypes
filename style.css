@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'RRPioneer';
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('RRPioneer'),
+    local('RRPioneer-Regular'),
+    url('./fonts/RRPioneer-Regular-v1.006.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RRPioneer';
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('RRPioneer'),
+    local('RRPioneer-Medium'),
+    url('./fonts/RRPioneer-Medium-v1.006.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RRPioneer';
+  font-display: swap;
+  font-weight: 500;
+  src:
+    local('RRPioneer'),
+    local('RRPioneer-MediumItalic'),
+    url('./fonts/RRPioneer-MediumItalic-v1.006.woff2') format('woff2');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'RRPioneer';
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('RRPioneer'),
+    local('RRPioneer-Bold'),
+    url('./fonts/RRPioneer-Bold-v1.006.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'RRPioneer';
+  font-display: swap;
+  font-weight: 700;
+  src:
+    local('RRPioneer'),
+    local('RRPioneer-BoldItalic'),
+    url('./fonts/RRPioneer-BoldItalic-v1.006.woff2') format('woff2');
+  font-style: italic;
+}
