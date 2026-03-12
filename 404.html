@@ -4,8 +4,15 @@
   <meta charset="utf-8">
   <title>NautIQ Prototypes</title>
   <script>
-    sessionStorage.setItem('spa-redirect', window.location.pathname + window.location.search + window.location.hash);
-    window.location.replace('/prototypes/');
+    var l = window.location;
+    var base = '/prototypes';
+    var path = l.pathname.slice(base.length) || '/';
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      base + '/?' + path.slice(1).replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
   </script>
 </head>
 <body></body>
