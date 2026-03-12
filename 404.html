@@ -3,12 +3,10 @@
   <meta charset="utf-8">
   <title>NautIQ Prototypes</title>
   <script>
-    // HashRouter: encode path in fragment and redirect to root
-    var l = window.location;
-    var base = '/prototypes';
+    var l = window.location, base = '/prototypes';
     var path = l.pathname.slice(base.length) || '/';
     if (path && path !== '/') {
-      l.replace(l.protocol+'//'+l.hostname+(l.port?':'+l.port:'')+base+'/#'+path+(l.search||'')+(l.hash||''));
+      l.replace(l.protocol+'//'+l.hostname+(l.port?':'+l.port:'')+base+'/#'+path+(l.search||''));
     } else {
       l.replace(l.protocol+'//'+l.hostname+(l.port?':'+l.port:'')+base+'/');
     }
