@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
   <meta charset="utf-8">
   <title>NautIQ Prototypes</title>
   <script>
-    var l = window.location, base = '/prototypes';
+    // Redirect bare paths to HashRouter format.
+    // e.g. /prototypes/prototype/cockpit-edit → /prototypes/#/prototype/cockpit-edit
+    var l = window.location;
+    var base = '/prototypes';
     var path = l.pathname.slice(base.length) || '/';
     if (path && path !== '/') {
-      l.replace(l.protocol+'//'+l.hostname+(l.port?':'+l.port:'')+base+'/#'+path+(l.search||''));
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        base + '/#' + path + (l.search || '') + (l.hash || '')
+      );
     } else {
-      l.replace(l.protocol+'//'+l.hostname+(l.port?':'+l.port:'')+base+'/');
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        base + '/'
+      );
     }
   </script>
-</head><body></body></html>
+</head>
+<body></body>
+</html>
